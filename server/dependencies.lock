@@ -338,6 +338,12 @@
         "org.springframework.boot:spring-boot-starter-web": {
             "locked": "2.3.12.RELEASE"
         },
+        "org.springframework.retry:spring-retry": {
+            "locked": "1.2.5.RELEASE",
+            "transitive": [
+                "com.netflix.conductor:conductor-es7-persistence"
+            ]
+        },
         "org.springframework:spring-aop": {
             "locked": "5.2.15.RELEASE",
             "transitive": [
@@ -366,6 +372,7 @@
             "transitive": [
                 "org.springframework.boot:spring-boot",
                 "org.springframework.boot:spring-boot-starter",
+                "org.springframework.retry:spring-retry",
                 "org.springframework:spring-aop",
                 "org.springframework:spring-beans",
                 "org.springframework:spring-context",
@@ -637,12 +644,6 @@
                 "org.apache.kafka:kafka-clients"
             ]
         },
-        "com.github.rholder:guava-retrying": {
-            "locked": "2.0.0",
-            "transitive": [
-                "com.netflix.conductor:conductor-common"
-            ]
-        },
         "com.github.spullara.mustache.java:compiler": {
             "locked": "0.9.3",
             "transitive": [
@@ -670,7 +671,6 @@
         "com.google.code.findbugs:jsr305": {
             "locked": "3.0.2",
             "transitive": [
-                "com.github.rholder:guava-retrying",
                 "com.google.guava:guava",
                 "com.google.protobuf:protobuf-java-util",
                 "com.netflix.archaius:archaius-core",
@@ -712,12 +712,10 @@
             "locked": "31.0.1-android",
             "transitive": [
                 "com.datastax.cassandra:cassandra-driver-core",
-                "com.github.rholder:guava-retrying",
                 "com.google.inject:guice",
                 "com.google.protobuf:protobuf-java-util",
                 "com.netflix.archaius:archaius-core",
                 "com.netflix.conductor:conductor-contribs",
-                "com.netflix.conductor:conductor-core",
                 "com.netflix.conductor:conductor-es6-persistence",
                 "com.netflix.conductor:conductor-mysql-persistence",
                 "com.netflix.conductor:conductor-postgres-persistence",
@@ -2222,6 +2220,12 @@
                 "com.netflix.conductor:conductor-rest"
             ]
         },
+        "org.springframework.retry:spring-retry": {
+            "locked": "1.2.5.RELEASE",
+            "transitive": [
+                "com.netflix.conductor:conductor-es7-persistence"
+            ]
+        },
         "org.springframework:spring-aop": {
             "locked": "5.2.15.RELEASE",
             "transitive": [
@@ -2252,6 +2256,7 @@
             "transitive": [
                 "org.springframework.boot:spring-boot",
                 "org.springframework.boot:spring-boot-starter",
+                "org.springframework.retry:spring-retry",
                 "org.springframework:spring-aop",
                 "org.springframework:spring-beans",
                 "org.springframework:spring-context",
@@ -2571,12 +2576,6 @@
                 "org.apache.kafka:kafka-clients"
             ]
         },
-        "com.github.rholder:guava-retrying": {
-            "locked": "2.0.0",
-            "transitive": [
-                "com.netflix.conductor:conductor-common"
-            ]
-        },
         "com.github.spullara.mustache.java:compiler": {
             "locked": "0.9.3",
             "transitive": [
@@ -2604,7 +2603,6 @@
         "com.google.code.findbugs:jsr305": {
             "locked": "3.0.2",
             "transitive": [
-                "com.github.rholder:guava-retrying",
                 "com.google.guava:guava",
                 "com.google.protobuf:protobuf-java-util",
                 "com.netflix.archaius:archaius-core",
@@ -2646,12 +2644,10 @@
             "locked": "31.0.1-android",
             "transitive": [
                 "com.datastax.cassandra:cassandra-driver-core",
-                "com.github.rholder:guava-retrying",
                 "com.google.inject:guice",
                 "com.google.protobuf:protobuf-java-util",
                 "com.netflix.archaius:archaius-core",
                 "com.netflix.conductor:conductor-contribs",
-                "com.netflix.conductor:conductor-core",
                 "com.netflix.conductor:conductor-es6-persistence",
                 "com.netflix.conductor:conductor-mysql-persistence",
                 "com.netflix.conductor:conductor-postgres-persistence",
@@ -4156,6 +4152,12 @@
                 "com.netflix.conductor:conductor-rest"
             ]
         },
+        "org.springframework.retry:spring-retry": {
+            "locked": "1.2.5.RELEASE",
+            "transitive": [
+                "com.netflix.conductor:conductor-es7-persistence"
+            ]
+        },
         "org.springframework:spring-aop": {
             "locked": "5.2.15.RELEASE",
             "transitive": [
@@ -4186,6 +4188,7 @@
             "transitive": [
                 "org.springframework.boot:spring-boot",
                 "org.springframework.boot:spring-boot-starter",
+                "org.springframework.retry:spring-retry",
                 "org.springframework:spring-aop",
                 "org.springframework:spring-beans",
                 "org.springframework:spring-context",
@@ -4912,6 +4915,12 @@
                 "org.springframework.boot:spring-boot-starter-test"
             ]
         },
+        "org.springframework.retry:spring-retry": {
+            "locked": "1.2.5.RELEASE",
+            "transitive": [
+                "com.netflix.conductor:conductor-es7-persistence"
+            ]
+        },
         "org.springframework:spring-aop": {
             "locked": "5.2.15.RELEASE",
             "transitive": [
@@ -4941,6 +4950,7 @@
                 "org.springframework.boot:spring-boot",
                 "org.springframework.boot:spring-boot-starter",
                 "org.springframework.boot:spring-boot-starter-test",
+                "org.springframework.retry:spring-retry",
                 "org.springframework:spring-aop",
                 "org.springframework:spring-beans",
                 "org.springframework:spring-context",
@@ -5225,12 +5235,6 @@
                 "org.apache.kafka:kafka-clients"
             ]
         },
-        "com.github.rholder:guava-retrying": {
-            "locked": "2.0.0",
-            "transitive": [
-                "com.netflix.conductor:conductor-common"
-            ]
-        },
         "com.github.spullara.mustache.java:compiler": {
             "locked": "0.9.3",
             "transitive": [
@@ -5258,7 +5262,6 @@
         "com.google.code.findbugs:jsr305": {
             "locked": "3.0.2",
             "transitive": [
-                "com.github.rholder:guava-retrying",
                 "com.google.guava:guava",
                 "com.google.protobuf:protobuf-java-util",
                 "com.netflix.archaius:archaius-core",
@@ -5300,12 +5303,10 @@
             "locked": "31.0.1-android",
             "transitive": [
                 "com.datastax.cassandra:cassandra-driver-core",
-                "com.github.rholder:guava-retrying",
                 "com.google.inject:guice",
                 "com.google.protobuf:protobuf-java-util",
                 "com.netflix.archaius:archaius-core",
                 "com.netflix.conductor:conductor-contribs",
-                "com.netflix.conductor:conductor-core",
                 "com.netflix.conductor:conductor-es6-persistence",
                 "com.netflix.conductor:conductor-mysql-persistence",
                 "com.netflix.conductor:conductor-postgres-persistence",
@@ -6979,6 +6980,12 @@
                 "org.springframework.boot:spring-boot-starter-test"
             ]
         },
+        "org.springframework.retry:spring-retry": {
+            "locked": "1.2.5.RELEASE",
+            "transitive": [
+                "com.netflix.conductor:conductor-es7-persistence"
+            ]
+        },
         "org.springframework:spring-aop": {
             "locked": "5.2.15.RELEASE",
             "transitive": [
@@ -7010,6 +7017,7 @@
                 "org.springframework.boot:spring-boot",
                 "org.springframework.boot:spring-boot-starter",
                 "org.springframework.boot:spring-boot-starter-test",
+                "org.springframework.retry:spring-retry",
                 "org.springframework:spring-aop",
                 "org.springframework:spring-beans",
                 "org.springframework:spring-context",

@@ -28,6 +28,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import com.netflix.conductor.annotations.VisibleForTesting;
 import com.netflix.conductor.common.metadata.tasks.TaskType;
 import com.netflix.conductor.common.metadata.workflow.DynamicForkJoinTaskList;
 import com.netflix.conductor.common.metadata.workflow.WorkflowDef;
@@ -41,7 +42,6 @@ import com.netflix.conductor.model.WorkflowModel;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.google.common.annotations.VisibleForTesting;
 
 /**
  * An implementation of {@link TaskMapper} to map a {@link WorkflowTask} of type {@link
@@ -226,11 +226,8 @@ public class ForkJoinDynamicTaskMapper implements TaskMapper {
      * This method creates a FORK task and adds the list of dynamic fork tasks keyed by
      * "forkedTaskDefs" and their names keyed by "forkedTasks" into {@link TaskModel#getInputData()}
      *
-     * @param workflowTask A {@link WorkflowTask} representing {@link TaskType#FORK_JOIN_DYNAMIC}
-     * @param workflowModel: A instance of the {@link WorkflowModel} which represents the workflow
-     *     being executed.
-     * @param taskId: The string representation of {@link java.util.UUID} which will be set as the
-     *     taskId.
+     * @param taskMapperContext: The {@link TaskMapperContext} which wraps workflowTask, workflowDef
+     *     and workflowModel
      * @param dynForkTasks: The list of dynamic forked tasks, the reference names of these tasks
      *     will be added to the forkDynamicTask
      * @return A new instance of {@link TaskModel} representing a {@link TaskType#TASK_TYPE_FORK}
